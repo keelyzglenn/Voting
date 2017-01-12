@@ -1,14 +1,18 @@
 $("document").ready(function() {
   $("form").submit(function(event) {
-    event.preventDefault();
-    var age = parseInt($(input).val());
+    debugger
+    var age1 = parseInt($("input#age").val());
 
-    if (age >= 18) {
+    if (age1 >= 18) {
       $(".over-18").show();
+      $(".under-18").hide();
     }
 
-    else (age < 18) {
+    else {
       $(".under-18").show();
+      $(".over-18").hide();
     }
+
+    event.preventDefault();
   });
-});
+})
